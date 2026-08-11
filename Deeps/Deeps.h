@@ -121,5 +121,6 @@ public:
  */
 __declspec(dllexport) double     __stdcall expGetInterfaceVersion(void);
 __declspec(dllexport) IPlugin*   __stdcall expCreatePlugin(const char* args);
+__declspec(dllexport) void       __stdcall expDestroyPlugin(IPlugin* instance);
 
 #endif // __ASHITA_Deeps_H_INCLUDED__

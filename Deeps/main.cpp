@@ -292,3 +292,13 @@ __declspec(dllexport) IPlugin* __stdcall expCreatePlugin(const char* args)
 {
     return (IPlugin*)new Deeps();
 }
+
+/**
+ * @brief Destroys an instance of this plugin object.
+ *
+ * @note This is a required export for Ashita interface 4.30.
+ */
+__declspec(dllexport) void __stdcall expDestroyPlugin(IPlugin* instance)
+{
+    delete instance;
+}
